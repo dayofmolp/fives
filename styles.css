@@ -1,123 +1,180 @@
 body {
-    font-family: 'Ubuntu', sans-serif;
+    font-family: 'VT323', monospace; /* Retro tech font */
+    background: linear-gradient(135deg, #222, #333); /* Dark gradient background */
+    color: #eee; /* Light text color */
     margin: 0;
     padding: 0;
-    background-color: #f0f2f5; /* Light grey background */
-    color: #333;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh; /* Ensure full viewport height */
+    overflow-x: hidden;
 }
 
 .container {
-    width: 90%;
-    max-width: 900px;
-    padding: 2em;
-    background-color: #fff;
-    border-radius: 12px;
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
-    text-align: center; /* Center title */
+    width: 95%; /* Wider container */
+    max-width: 1000px; /* Increased max-width */
+    margin: 30px auto; /* Margin for container */
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.05); /* Slightly transparent white */
+    border-radius: 15px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.3); /* Deeper shadow */
+    backdrop-filter: blur(10px); /* Blur effect */
+    border: 2px solid #444; /* Darker border */
+}
+
+header {
+    background-color: #00bcd4; /* Vibrant header */
+    color: #222;
+    text-align: center;
+    padding: 20px 0 10px 0; /* Reduced header padding */
+    margin-bottom: 20px;
+    border-bottom: 5px dashed #ffc107; /* Dashed border */
 }
 
 h1 {
-    font-size: 2.5em;
-    margin-bottom: 1em;
-    color: #37474f; /* Dark grey-blue title */
+    margin: 0;
+    font-size: 3em;
+    font-family: 'Press Start 2P', monospace; /* Pixelated font */
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 0px #ffc107; /* Retro shadow */
+}
+
+.whys-text {
+    color: #ffc107; /* Highlight color */
+}
+
+.tagline {
+    font-size: 1.2em;
+    color: #ddd;
+    margin-top: 10px; /* Spacing below title */
+}
+
+main {
+    padding: 20px; /* Padding within main */
 }
 
 .why-section {
-    display: flex;
-    margin-bottom: 1.5em;
-    align-items: stretch; /* Equal height boxes */
+    margin-bottom: 25px; /* Spacing between sections */
+    padding: 20px;
+    background-color: rgba(0, 188, 212, 0.1); /* Teal section background */
+    border-radius: 10px;
+    border: 2px solid #00bcd4;
+    display: flex; /* Flexbox for layout */
+    align-items: stretch;
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Hover transition */
+}
+
+.why-section:hover {
+    transform: translateY(-5px); /* Lift on hover */
+    box-shadow: 0 5px 15px rgba(0, 188, 212, 0.5); /* Brighter shadow on hover */
 }
 
 .why-box {
-    background-color: #e0e0e0; /* Light grey for Why box */
-    color: #212121; /* Dark grey text */
+    background-color: rgba(55, 71, 79, 0.8); /* Darker grey-blue for Why box */
+    color: #eee; /* Light text color */
     padding: 1.5em;
-    border-radius: 10px 0 0 10px; /* Rounded left corners */
+    border-radius: 10px 0 0 10px; /* Rounded left */
     text-align: left;
-    flex: 1; /* Allow Why box to grow */
+    flex: 1.2; /* Slightly larger Why box */
     display: flex;
     flex-direction: column;
     justify-content: center;
-    position: relative; /* For number circle */
+    position: relative;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.4) inset; /* Inner shadow for depth */
 }
 
 .why-number {
-    font-family: 'Roboto Mono', monospace;
-    font-size: 1.8em;
-    font-weight: bold;
-    color: #00bcd4; /* Teal number */
+    font-family: 'Press Start 2P', monospace; /* Pixelated font for numbers */
+    font-size: 2em;
+    color: #ffc107; /* Yellow number color */
     position: absolute;
-    top: -0.5em;
-    left: -0.5em;
-    background-color: #fff;
+    top: -0.6em;
+    left: -0.6em;
+    background-color: #222; /* Dark background for number circle */
     border-radius: 50%;
-    width: 2em;
-    height: 2em;
+    width: 2.4em;
+    height: 2.4em;
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    border: 3px dashed #ffc107; /* Dashed yellow border */
+    text-shadow: 1px 1px 0px #222; /* Text shadow for number */
 }
 
+
 .why-question {
-    font-weight: bold;
-    font-size: 1.1em;
+    font-weight: normal; /* Regular font weight */
+    font-size: 1.2em;
     margin: 0;
+    text-shadow: 1px 1px 0px #222; /* Text shadow for question */
 }
 
 .answer-box {
-    background-color: #f8f8f8; /* Very light grey for Answer box */
-    color: #424242; /* Slightly lighter dark grey */
+    background-color: rgba(255, 255, 255, 0.08); /* Transparent white for answer */
+    color: #ddd; /* Light grey text */
     padding: 1.5em;
-    border-radius: 0 10px 10px 0; /* Rounded right corners */
+    border-radius: 0 10px 10px 0; /* Rounded right */
     text-align: left;
     flex: 2; /* Answer box takes more space */
-    border-left: 2px solid #e0e0e0; /* Separator line */
+    border-left: 2px dashed #00bcd4; /* Dashed teal separator */
     display: flex;
     align-items: center;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.4) inset; /* Inner shadow for depth */
 }
 
 .answer-box p {
     margin: 0;
     font-size: 1em;
-    line-height: 1.6;
+    line-height: 1.7;
+    text-shadow: 1px 1px 0px #222; /* Text shadow for answer */
 }
 
-/* Responsive adjustments for smaller screens */
+
+/* Responsive adjustments */
 @media (max-width: 768px) {
     .container {
         padding: 1.5em;
     }
 
+    header {
+        padding: 15px 0 5px 0; /* Adjust header padding on small screens */
+    }
+
     h1 {
-        font-size: 2em;
+        font-size: 2.5em; /* Slightly smaller title on small screens */
+    }
+
+    .tagline {
+        font-size: 1em; /* Smaller tagline */
     }
 
     .why-section {
-        flex-direction: column; /* Stack boxes on smaller screens */
+        flex-direction: column; /* Stack boxes on small screens */
+        border-radius: 15px; /* Rounded corners when stacked */
+    }
+
+    .why-section:hover {
+        transform: none; /* Disable hover lift on small screens */
+        box-shadow: 0 0 15px rgba(0, 188, 212, 0.3); /* Softer shadow on hover for stacked */
     }
 
     .why-box {
-        border-radius: 10px 10px 0 0; /* Rounded top corners when stacked */
+        border-radius: 15px 15px 0 0; /* Rounded top when stacked */
         text-align: center; /* Center text in Why box when stacked */
-        padding-bottom: 1em; /* Add padding below Why question */
+        padding-bottom: 1em;
+        box-shadow: none; /* Remove inner shadow when stacked */
     }
 
     .why-number {
         top: auto;
         left: 50%;
-        transform: translateX(-50%); /* Center number above question */
-        bottom: -0.8em; /* Position below when stacked */
+        transform: translateX(-50%);
+        bottom: -0.8em;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4); /* Shadow for number when stacked */
     }
 
     .answer-box {
-        border-radius: 0 0 10px 10px; /* Rounded bottom corners when stacked */
-        border-left: none; /* Remove separator line when stacked */
-        border-top: 2px solid #e0e0e0; /* Add top separator when stacked */
-        padding-top: 1em; /* Add padding above answer */
+        border-radius: 0 0 15px 15px; /* Rounded bottom when stacked */
+        border-left: none;
+        border-top: 2px dashed #00bcd4; /* Top separator when stacked */
+        padding-top: 1em;
+        box-shadow: none; /* Remove inner shadow when stacked */
     }
 }
